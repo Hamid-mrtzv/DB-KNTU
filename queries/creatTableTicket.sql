@@ -8,6 +8,5 @@ CREATE TABLE ticket (
     remaining_capacity INT NOT NULL,
     travel_class VARCHAR(20),
     destinations VARCHAR(100),
-    source VARCHAR(100)
+    source VARCHAR(100),
 );
-
