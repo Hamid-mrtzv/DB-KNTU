@@ -1,7 +1,7 @@
 CREATE TABLE users (
     userID INT PRIMARY KEY IDENTITY(1,1),
-    phone_number VARCHAR(20) UNIQUE,
-    email VARCHAR(50) UNIQUE,
+phone_number VARCHAR(11) UNIQUE CHECK (phone_number LIKE '09[0-9]%' AND LEN(phone_number) = 11 OR phone_number IS NULL),
+    email VARCHAR(50) UNIQUE CHECK (email LIKE '%_@_%._%' OR email IS NULL),
     name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
     role BIT NOT NULL,
